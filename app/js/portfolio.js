@@ -38,4 +38,14 @@ angular
 
       $scope.businessItems = data;
     });
+
+    $scope.portfolioStyles = {
+      tabContent: {
+        padding: 0
+      },
+      item: {
+        width: 'max-content',
+        height: 'max-content'
+      }
+    }
   });
