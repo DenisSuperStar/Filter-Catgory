@@ -15,50 +15,50 @@
   </head>
   <body>
     <div class="container" ng-controller="selectFilter">
-      <ul class="nav">
+      <ul class="nav mt-4 mb-4">
         <li class="nav-item">
           <a
             href="#"
-            class="nav-link"
+            class="nav-link current-link"
             ng-click="selected='All'"
-            ng-class="{'active': (selected == 'All')}"
+            ng-class="{'is-active-link': (selected == 'All')}"
             >All</a
           >
         </li>
         <li class="nav-item">
           <a
             href="#"
-            class="nav-link"
+            class="nav-link current-link"
             ng-click="selected='Websites'"
-            ng-class="{'active': (selected == 'Websites')}"
+            ng-class="{'is-active-link': (selected == 'Websites')}"
             >Websites</a
           >
         </li>
         <li class="nav-item">
           <a
             href="#"
-            class="nav-link"
+            class="nav-link current-link"
             ng-click="selected='Flayers'"
-            ng-class="{'active': (selected == 'Flayers')}"
+            ng-class="{'is-active-link': (selected == 'Flayers')}"
             >Flayers</a
           >
         </li>
         <li class="nav-item">
           <a
             href="#"
-            class="nav-link"
+            class="nav-link current-link"
             ng-click="selected='Business Card'"
-            ng-class="{'active': (selected == 'Business Card')}"
+            ng-class="{'is-active-link': (selected == 'Business Card')}"
             >Business Card</a
           >
         </li>
       </ul>
-      <div class="container-fluid">
+      <div class="container-fluid" ng-style="{{portfolioStyles.tabContent}}">
         <div class="row" ng-show="selected == 'All'">
           <div
             class="col-4 mb-4"
             ng-repeat="item in allItems"
-            style="width: max-content; height: max-content"
+            ng-style="{{portfolioStyles.itemStyle}}"
           >
             <div class="card">
               <img
@@ -73,7 +73,7 @@
           <div
             class="col-4 mb-4"
             ng-repeat="web in webItems"
-            style="width: max-content; height: max-content"
+            ng-style="{{portfolioStyles.itemStyle}}"
           >
             <div class="card">
               <img
@@ -88,7 +88,7 @@
           <div
             class="col-4 mb-4"
             ng-repeat="flayer in flayerItems"
-            style="width: max-content; height: max-content"
+            ng-style="{{portfolioStyles.itemStyle}}"
           >
             <div class="card">
               <img
@@ -103,7 +103,7 @@
           <div
             class="col-4 mb-4"
             ng-repeat="business in businessItems"
-            style="width: max-content; height: max-content"
+            ng-style="{{portfolioStyles.itemStyle}}"
           >
             <div class="card">
               <img
