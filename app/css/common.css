@@ -1,0 +1,20 @@
+.current-link {
+    border: 1px solid #808080;
+    background: #fff;
+    color: #000;
+}
+
+.current-link:hover {
+    color: #000;
+}
+
+.is-active-link {
+    border: 1px solid transparent;
+    background: #808080;
+    color: #fff;
+}
+
+.is-active-link:hover,
+.is-active-link:focus {
+    color: #fff;
+}
